@@ -1,0 +1,34 @@
+h2{
+    margin: auto;
+    text-align: center;
+    font-size: 100px;
+    font-weight: bold;
+}
+#container {
+    color: white;
+    border: solid, grey;
+}
+#addition,
+#subtraction{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    padding: 50px;
+}
+
+#input {
+    border: 40px, grey;
+    height: 100px;
+    width: 150px;
+    text-align: center;
+}
+#addition,
+#subtraction,
+#input{
+    background-color: white;
+    width: 100px;
+    height: 100px;
+}
+#result {
+    font-size: 200px bold;
+}
