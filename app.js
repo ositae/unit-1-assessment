@@ -5,30 +5,30 @@ const container = document.querySelector('#container');
 
 let numCount = 'numbers';
 if (numCount === 'numbers'){
-    document.addEventListener('click', numberCounter )
+    document.addEventListener('click', numberCount)
 }
 // DOM manipulation and eventListener
 container.addEventListener('click', (event) => {
 	if (event.target.id === 'resetButton') {
-		increment.value = 1;
+		input.value = 1;
     }else if (event.target.id === 'numbers' && numCount === 'numbers') {
 		document.addEventListener('click', numberCounter);
-        result.textContent = '0';
-		input.value = 1;
-        numCount = 'numbers';
+        return result.textContent;
+        // numCount = 'numbers';
 }});
 
 // add and subtract functions using Logic
 // Make negative numbers red
 // use parseInt method to return the integer value
-function numberCounter(event) {
+function numberCount(event) {
     if (event.target.id === 'addition') {
-        result.textContent =
-            parseInt(result.textContent) + parseInt(input.value);
+        result.textContent +=
+            parseInt(result.textContent + input.value)
             return result.textContent;
     } else if (event.target.id === 'subtraction') {
-        result.textContent =
-            parseInt(result.textContent) - parseInt(input.value);
+        result.textContent -=
+            parseInt(result.textContent - input.value);
+            return result.textContent
     }
     if (parseInt(result.textContent) < 0) {
         result.style.color = 'red';
